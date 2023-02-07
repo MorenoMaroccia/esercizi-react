@@ -1,18 +1,23 @@
-import React from 'react'
-import { Name } from './Name'
+
+
+// import React from 'react'
+//  import { Name } from './Name'
 
 
 
-export class Age4 extends React.Component{
+// export class Age4 extends React.Component{
+  
+
+//     render () {
+//         return (
+//         <div>
+          
+//             {this.props.age > 18 && this.props.age < 65 && Name.a === 'john' && <p>Your age is, {Name.a}{this.props.age}</p>}
+//               { <p>{this.a = 'john'}</p>}
+//         </div>)
+      
+//     }
+
+// }
 
 
-    render () {
-        return (
-        <div>
-            <Name name='john' />
-        {this.props.age > 18 && this.props.age < 65 && this.props.name === "John" && 
-        <p>Your age is, {this.props.age}</p>}
-        </div>)
-    }
-
-}

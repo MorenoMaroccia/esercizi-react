@@ -19,3 +19,23 @@
 // }
 
 // export default Age2
+
+import React from 'react'
+
+
+export class Age2 extends React.Component{
+
+
+    render () {
+        return (
+        <div>
+
+          <p>{this.props.age ? this.props.age : 'No prop'}</p>  
+
+          
+        </div>)
+    }
+
+}
+
+export default Age2
