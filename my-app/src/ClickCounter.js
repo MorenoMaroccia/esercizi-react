@@ -5,27 +5,30 @@ import React from "react";
 
 export class ClickCounter extends React.Component{
   state = {
-    count: 0
+    count: this.props.initialValue
   }
 
-  constructor(props){
-    super(props)
-    setInterval(() => {
-      this.setState((state) => {
-        return{
-          count:state.count + 1 
-      }
-      })
-    })
-  }
+ handleCounterIncrement = (event) => {
+  this.setState((state) => {
+    return {
+      count:state.count + this.props.incrementBy
+    }
+  })
+ }
   render () {
       return (
       <div>
         <h1>{this.state.count}</h1>
+        <button onClick={this.handleCounterIncrement}>increment</button>
       </div>
       )
 
 }
+}
+
+ClickCounter.defaultProps = {
+incrementBy:1,
+initialValue:0,
 }
 
 export default ClickCounter
