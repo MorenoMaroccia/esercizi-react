@@ -6,7 +6,7 @@ export class App extends React.Component{
   render () {
       return (
       <div>
-        <TodoList3 names={['Mario', 'federico']} />
+        <TodoList3  />
       </div>
       )
 
