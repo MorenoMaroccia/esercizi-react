@@ -32,28 +32,24 @@ import React from "react";
 
 export class TodoList3 extends React.Component {
    state = {
+    username:'',
    items : []
    }
 
     handleFormDefault = (event) => {
        event.preventDefault()
-       const username = event.target.elements.username.value
-this.setState( (state)=> {
-      items: this.items.username.map((name) => <li>{name}</li>)
-
-})
-    
        
-       console.log(this.state.items)
-
-               
+  this.setState( (state)=> {
+      state.items = username.map((name) => <li>{name}</li>)
+        username  event.target.elements.username.value
+})
     }
 
-//     handleClick =() => {
-//         return(
-           
-//    )
-//     }
+    handleClick =() => {
+        { this.state.items &&<ul>
+                        <li>{this.state.items.name}</li>
+                    </ul>}
+    }
    
 
 
@@ -65,12 +61,14 @@ this.setState( (state)=> {
             <div>
                
                 <form onSubmit={this.handleFormDefault}>
-                     <ul>
-                        {this.state.items}
-                    </ul>
+                    
                     <input name="username" />
                     
-                    <button  type="submit">Login</button>
+                    <button onClick={this.handleClick} type="submit">Login</button>
+
+                    { this.state.username &&<ul>
+                        <li>{this.state.username.name}</li>
+                    </ul>}
                     
                 </form>
                 
