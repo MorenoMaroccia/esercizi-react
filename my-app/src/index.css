@@ -6,3 +6,8 @@
 .item {
     background-color: red;
 }
+
+.container {
+    background-color: white;
+    border: 1px solid red;
+}
