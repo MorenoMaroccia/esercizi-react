@@ -1,7 +1,9 @@
 import React from "react";
+import { CicloDiVita } from "./CicloDiVita";
 import { Counter } from "./Counter";
 import { Counter3 } from "./Counter3";
 import { Counter4 }from "./Counter4";
+
 
 
 
@@ -13,6 +15,7 @@ export class App extends React.Component{
         <Counter />
         <Counter3 />
         <Counter4 />
+        <CicloDiVita />
       </div>
       )
 
