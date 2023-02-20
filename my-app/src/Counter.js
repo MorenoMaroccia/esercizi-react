@@ -16,7 +16,7 @@ export class Counter extends React.Component{
           count:state.count + 1 
       }
       })
-    })
+    },1000)
   }
   render () {
       return (
