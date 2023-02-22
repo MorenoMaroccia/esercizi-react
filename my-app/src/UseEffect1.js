@@ -10,7 +10,7 @@ const [counter, setCounter] = useState(initialValue)
 
 useEffect(() => {
     console.log(`the counter is now ${counter}`)
-})
+}, [counter])
 
  function handleCounterIncrement() {
    setCounter(c => c + 1)
@@ -25,9 +25,8 @@ useEffect(() => {
 
 }
 
-ClickCounter.defaultProps = {
+ClickCounter1.defaultProps = {
 incrementBy:1,
 initialValue:0,
 }
 
-export default ClickCounter
