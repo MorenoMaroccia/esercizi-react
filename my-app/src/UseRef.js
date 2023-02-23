@@ -39,18 +39,32 @@ import React,{useState} from "react";
 
 
 export function CarDetails() {
-    const [model, setModel] = useState('Macchina')
+    const [data, setData] = useState({
+        model:'',
+        year:'',
+        color:'',
+    })
 
     function handleValueChange(event) {
-         setModel(event.target.value)
+        //  setData(event.target.value)
+         const name=event.target.name
+         const value =event.target.value
+
+         setData( {
+            [name]: [value]
+         })
        
         
     }
     return(
         <div>
-            <p> {model}</p>
+            <p> model:{data.model}</p>
+            <p> year:{data.year}</p>
+            <p>color: {data.color}</p>
            
-            <input value={model} onChange={handleValueChange} placeholder='model'></input>
+            <input name="model" value="model"  onChange={handleValueChange} ></input>
+            <input name="year" value="year" onChange={handleValueChange} ></input>
+            <input name="color" value="color" onChange={handleValueChange} ></input>
 
         </div>
 

@@ -11,12 +11,14 @@ export class App extends React.Component{
   render () {
       return (
       <div>
+ <CarDetails />
+
         <Counter />
         <Login />
         <UseGithubUser username="gianmarcotoso"/>
         {/* <GithubUser /> */}
 
-        <CarDetails />
+       
         
       </div>
       )
