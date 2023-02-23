@@ -47,12 +47,17 @@ export function CarDetails() {
 
     function handleValueChange(event) {
         //  setData(event.target.value)
-         const name=event.target.name
-         const value =event.target.value
+        //  const name=event.target.name
+        //  const value =event.target.value
 
-         setData( {
-            [name]: [value]
-         })
+        //  setData( {
+        //     [name]: [value]
+        //  })
+        const { name, type, value, checked } = event.target;
+
+        setData({
+            [name]: type === 'checkbox' ? checked : value,
+        })
        
         
     }
