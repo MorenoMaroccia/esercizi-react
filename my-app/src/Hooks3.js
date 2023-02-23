@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export function UseGithubUser({username}) {
     const [data, setdata] = useState(null)
@@ -9,23 +9,23 @@ export function UseGithubUser({username}) {
          return response.json()
 
         .then((json) => {
+
             console.log(json)
+
             setdata(json)
         })
 
     })
 
-    })
-
-    return{
-        data:data.name,
-        username:username
-    }
+    }, {username})
     
-    // return (
-    //     <div>
-    //         {data && <h1>{data.name}</h1>}
-    //     </div>
-    // )
-        
+
+    
+return (
+    <div>
+        {data && <h1>{data.name}<img src={data.avatar_url} /></h1>}
+    </div>
+)
 }
+
+export default UseGithubUser
