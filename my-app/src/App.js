@@ -6,6 +6,8 @@ import { Login } from "./Login";
 import {UseGithubUser} from './Hooks3'
 import { CarDetails } from "./UseRef";
 
+import { Language } from "./UseContext";
+
 
 export class App extends React.Component{
   render () {
@@ -17,6 +19,9 @@ export class App extends React.Component{
         <Login />
         <UseGithubUser username="gianmarcotoso"/>
         {/* <GithubUser /> */}
+        
+        
+        <Language />
 
        
         
