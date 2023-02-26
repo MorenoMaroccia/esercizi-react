@@ -4,7 +4,7 @@ import React from "react";
 export class TodoList5 extends React.Component{
     state= {
             item:'',
-            items:['ciao', 'Mario', 'Rossi']
+            items:[]
         }
 
     handleInputChange =(event) => {

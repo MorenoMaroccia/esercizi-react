@@ -6,7 +6,7 @@ export class TodoList3 extends React.Component{
         super(props)
         this.state= {
             item:'',
-            items:['ciao', 'Mario', 'Rossi']
+            items:[]
         }
     }
     handleInputChange =(event) => {
