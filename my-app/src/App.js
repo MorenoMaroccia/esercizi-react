@@ -3,10 +3,12 @@ import React from "react";
 import { Counter } from "./Counter";
 // import { GithubUser } from "./GithubUser";
 import { Login } from "./Login";
-import {UseGithubUser} from './Hooks3'
+
 import { CarDetails } from "./UseRef";
 
 import { Language } from "./UseContext";
+
+import { Hooks3 } from "./Hooks3";
 
 
 export class App extends React.Component{
@@ -17,11 +19,13 @@ export class App extends React.Component{
 
         <Counter />
         <Login />
-        <UseGithubUser username="gianmarcotoso"/>
+        
         {/* <GithubUser /> */}
         
         
-        <Language />
+        <Language username='gainamarcotoso'/>
+
+        <Hooks3 username='gainamarcotoso'/>
 
        
         
