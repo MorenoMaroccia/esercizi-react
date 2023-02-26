@@ -3,18 +3,21 @@ import React, { useEffect, useState } from "react";
 
 
 
-export function Counter(initialValue = 0) {
-    const [counter, setCounter] = useState(initialValue)
+export function Counter() {
+    const [counter, setCounter] = useState(0)
 
     useEffect(() => {
-        console.log(a)
+      const interval= setInterval(() => {
+        setCounter(c => c + 1)
+       },1000)
+       return () => clearInterval(interval)
     }, [counter])
 
 
-    function a() { return (setInterval(() => {
-           setCounter(c => c + 1)
-          },1000))
-        }
+    // function a() { return (setInterval(() => {
+    //        setCounter(c => c + 1)
+    //       },1000))
+    //     }
 
 
 
@@ -36,4 +39,5 @@ export function Counter(initialValue = 0) {
       )
 
 }
+
 
