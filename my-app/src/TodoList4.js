@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export class TodoList3 extends React.Component{
+export class TodoList4 extends React.Component{
     constructor(props) {
         super(props)
         this.state= {
@@ -16,7 +16,7 @@ export class TodoList3 extends React.Component{
 
     handleAddItem = ()=> {
         this.state.items.push(this.state.item)
-        this.setState({items: this.state.items}); 
+        this.setState({items: this.state.items, item:'' }); 
 
         }
 
