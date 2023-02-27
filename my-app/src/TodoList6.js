@@ -22,10 +22,7 @@ export class TodoList6 extends React.Component{
            this.setState({items:[]}); 
           }
 
-        // handleInputRemove=() => {
-        //     // 
-           
-        //    }
+        
           
         
 
