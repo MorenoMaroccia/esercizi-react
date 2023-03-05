@@ -1,5 +1,5 @@
 import React,{useContext, UseContext} from "react";
-import { LanguageContext } from "./languageContext";
+import { LanguageContext } from "./LanguageContext";
 
 
 

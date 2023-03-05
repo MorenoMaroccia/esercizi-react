@@ -1,6 +1,7 @@
 import React,{useState} from "react";
-import { LanguageContext } from "./languageContext";
+import { LanguageContext } from "./LanguageContext";
 import { Container } from "./Container";
+
 
 export function  Language (){
     const [language, setLanguage] = useState('en')
@@ -18,8 +19,7 @@ export function  Language (){
             <option value="it">ITALIANO</option>
           </select>
           <LanguageContext.Provider value={language}>
-
-            <Container title = "componente container" />
+            <Container title=""/>
           </LanguageContext.Provider>
         
       
