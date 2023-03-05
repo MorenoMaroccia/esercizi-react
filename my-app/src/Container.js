@@ -13,13 +13,13 @@ export function Container(props) {
   
       return (
       <div >
-        {props.title}
+        
         <LanguageContext.Consumer>
           { language => {
             return(
               <div>
                 
-                <h1>{String[language].TITLE_IS}   {this.props.title }</h1>
+                <h1>{String[language].TITLE_IS}   {props.title}</h1>
               </div>
             )
           }}
