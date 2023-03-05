@@ -1,12 +1,15 @@
-import React,{UseContext} from "react";
-import { LanguageContext } from "./UseContext";
+import React,{useContext, UseContext} from "react";
+import { LanguageContext } from "./languageContext";
 
 
 
-export function Container() {
+export function DisplayLanguage() {
   const language = UseContext(LanguageContext)
+   return (
+      <h3>current: {language}</h3>
 
-  return <h3>current: {language}</h3>
+  )
+
       
       
 

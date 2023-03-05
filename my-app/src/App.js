@@ -9,6 +9,7 @@ import { CarDetails } from "./UseRef";
 import { Language } from "./UseContext";
 
 import { Hooks3 } from "./Hooks3";
+import { LanguageContext } from "./languageContext";
 
 
 export class App extends React.Component{
@@ -23,9 +24,14 @@ export class App extends React.Component{
         {/* <GithubUser /> */}
         
         
-        <Language username='gainamarcotoso'/>
+        {/* <Language username='gainamarcotoso'/>
 
-        <Hooks3 username='gainamarcotoso'/>
+        <Hooks3 username='gainamarcotoso'/> */}
+
+        <Language />
+        
+
+        
 
        
         

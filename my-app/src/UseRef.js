@@ -35,7 +35,7 @@
 //     )
 // }
 
-import React,{useState} from "react";
+import React,{useEffect, useRef, useState} from "react";
 
 
 export function CarDetails() {
@@ -45,31 +45,29 @@ export function CarDetails() {
         color:'',
     })
 
-    function handleValueChange(event) {
-        //  setData(event.target.value)
-        //  const name=event.target.name
-        //  const value =event.target.value
+    const inputRef = useRef(null)
 
-        //  setData( {
-        //     [name]: [value]
-        //  })
-        const { name, type, value, checked } = event.target;
+        
+    function handaleInputChange(event) {
+        setData(event.target.value)
+    }
+        
 
-        setData({
-            [name]: type === 'checkbox' ? checked : value,
-        })
+    useEffect(() => {
+        inputRef.current.focus()
+    }, [])
        
         
-    }
+    
     return(
         <div>
-            <p> model:{data.model}</p>
-            <p> year:{data.year}</p>
-            <p>color: {data.color}</p>
+             <h1> model:{data.model}</h1>
+            <h1> year:{data.year}</h1>
+            <h1>color: {data.color}</h1>
            
-            <input name="model" value="model"  onChange={handleValueChange} ></input>
-            <input name="year" value="year" onChange={handleValueChange} ></input>
-            <input name="color" value="color" onChange={handleValueChange} ></input>
+            <input  value={data.model}  onChange={handaleInputChange} ref={inputRef} ></input>
+            <input  value={data.year} onChange={handaleInputChange} ref={inputRef}></input>
+            <input  value={data.color} onChange={handaleInputChange} ref={inputRef}></input>
 
         </div>
 

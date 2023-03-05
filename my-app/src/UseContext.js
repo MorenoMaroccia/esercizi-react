@@ -12,7 +12,7 @@ export function  Language (){
     
       return (
       <div>
-         <h1>Contesto2</h1>
+         
           <select  value={language} onChange={handleChangeLanguage}>
             <option value="en">ENGLISH</option>
             <option value="it">ITALIANO</option>
