@@ -10,6 +10,8 @@ import { Language } from "./UseContext";
 
 import { Hooks3 } from "./Hooks3";
 import { LanguageContext } from "./LanguageContext";
+import { UseCallback } from "./UseCallback";
+import { FilteredList } from "./UseMemo";
 
 
 export class App extends React.Component{
@@ -24,11 +26,13 @@ export class App extends React.Component{
         {/* <GithubUser /> */}
         
         
-        {/* <Language username='gainamarcotoso'/>
+        <Language username='gainamarcotoso'/>
 
-        <Hooks3 username='gainamarcotoso'/> */}
+        <Hooks3 username='gainamarcotoso'/> 
 
         <Language />
+        <UseCallback />
+        <FilteredList age= {33} name="Mario " id="MR  " />
 
         
         
