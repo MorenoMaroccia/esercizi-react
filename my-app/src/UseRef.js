@@ -4,8 +4,8 @@ import React,{useEffect, useRef, useState} from "react";
 
 
 export function CarDetails() {
-    const [data, setData] = useState({
-        model:'',
+    const [date, setData] = useState({
+        model:'ciao',
         year:'',
         color:'',
     })
@@ -26,13 +26,14 @@ export function CarDetails() {
     
     return(
         <div>
-             <h1> model:{data.model}</h1>
-            <h1> year:{data.year}</h1>
-            <h1>color: {data.color}</h1>
+
+             <h1> model:{date.model}</h1>
+            <h1> year:{date.year}</h1>
+            <h1>color: {date.color}</h1>
            
-            <input  value={data.model}  onChange={handaleInputChange} ref={inputRef} ></input>
-            <input  value={data.year} onChange={handaleInputChange} ref={inputRef}></input>
-            <input  value={data.color} onChange={handaleInputChange} ref={inputRef}></input>
+            <input  value={date.model}  onChange={handaleInputChange} ref={inputRef} ></input>
+            <input  value={date.year} onChange={handaleInputChange} ref={inputRef}></input>
+            <input  value={date.color} onChange={handaleInputChange} ref={inputRef}></input>
 
         </div>
 

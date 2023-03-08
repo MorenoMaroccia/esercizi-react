@@ -11,7 +11,7 @@
   
  
 
-//  const result = useMemo(() => list(), [])
+
   
     return(
       <p>{props.age >18  && <h1>{list}</h1> }</p>
