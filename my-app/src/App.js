@@ -8,41 +8,34 @@ import { CarDetails } from "./UseRef";
 
 import { Language } from "./UseContext";
 
-import { Hooks3 } from "./Hooks3";
-import { LanguageContext } from "./LanguageContext";
+
+
 import { UseCallback } from "./UseCallback";
 import { FilteredList } from "./UseMemo";
+import { GithubUsers } from "./GithubUser";
 
 
-export class App extends React.Component{
-  render () {
-      return (
+export class App extends React.Component {
+  render() {
+    return (
       <div>
- <CarDetails />
-
+        <p>Hooks1</p>
         <Counter />
+        <p>Hooks2</p>
         <Login />
-        
-        {/* <GithubUser /> */}
-        
-        
-        <Language username='gainamarcotoso'/>
+        <p>hooks3</p>
+        <GithubUsers username="gianmarcotoso" />
 
-        <Hooks3 username='gainamarcotoso'/> 
-
+        <p>useRef</p>
+        <CarDetails />
+        <p>UseContext</p>
         <Language />
+        <p>UseCallback</p>
         <UseCallback />
-        <FilteredList age= {33} name="Mario " id="MR  " />
-
-        
-        
-
-        
-
-       
-        
+        <p>useMemo</p>
+        <FilteredList age={33} name="Mario " id="MR  " />
       </div>
-      )
+    )
 
-}
+  }
 }

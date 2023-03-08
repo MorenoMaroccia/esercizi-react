@@ -1,16 +1,14 @@
-import React, {useEffect} from "react";
-import { UseGithubUser } from "./Hooks3";
+import React from "react";
+import { GithubUser } from "./Hooks3";
 
 
-export function GithubUser(username) {
-    const {data, setData} = UseGithubUser()
+export function GithubUsers({username}) {
+    const {data} = GithubUser({username})
 
 
     return (
         <div>
-            {data && <h1>{data.name}</h1>}
+            {data && <h1>{data.name} <img src={data.avatar_url} /></h1>}
         </div>
     )
 }
-
-{/* <img src={data.avatar_url} /> */}
