@@ -18,7 +18,7 @@ export function GithubUser({username}) {
 
     })
 
-    }, {username})
+    }, [username])
     
 
     
