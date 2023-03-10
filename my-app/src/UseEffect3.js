@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export function GithubUser({username}) {
-    const [data, setdata] = useState(null)
+    const [data, setdata] = useState({})
 
     useEffect(()=> {
         fetch(`https://api.github.com/users/${username}`)

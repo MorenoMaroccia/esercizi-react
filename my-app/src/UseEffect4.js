@@ -1,50 +1,25 @@
 import React, { useEffect, useState } from "react";
+import {GithubUser} from "./UseEffect3"
 
 
-export function TodoList () {
-    const [data, setData] = useState({
-         item:'',
-        items:['ciao'],
-        
-    })
-        
-           
-            
-        
-    // useEffect(()=> {
-    //     fetch(`https://api.github.com/users/${data.item}`)
-    //     .then((response) => {
-    //      return response.json()
+export function GithubUserList () {
+    const [list, setList] = useState([])
+    const [username ,setUsername] = useState('')
 
-    //     .then((json) => {
-
-    //         console.log(json)
-
-    //         setData(json)
-    //     })
-
-    // })
-
-    // }, [data.item]);
-    
-    function handleInputChange(event) {
-        setData({item:event.target.value})
+    const adUsername = () => {
+        setList((list)=> [...list, username] )
     }
 
-    function handleAddItem()  {
-        data.items.push(data.item)
-        setData({items: data.items, item:'' }); 
-
-        }
-
-
+    const changeUsername = (event) => {
+        setUsername(event.target.value)
+    }
         return(
 
             <div>
-                <input onChange={handleInputChange} value={item} />
-                <button onClick={handleAddItem}>Add</button>
+                <input onChange={changeUsername} value={username} />
+                <button onClick={adUsername}>Add</button>
                 <ul>
-                {data.items.map((item) => <li key={item}>{item}{data.name}</li>) }
+                    {!!list.length > 0 && list.map((user) => <li key={user}><GithubUser username={user}/></li>)}
                 </ul> 
             </div>
            

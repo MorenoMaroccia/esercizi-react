@@ -5,7 +5,7 @@ import { Login } from "./UseState2";
 import { ClickCounter1 } from "./UseEffect1";
 import { GithubUser } from "./UseEffect3";
 import { Counter } from "./UseEffect2";
-import { TodoList } from "./UseEffect4";
+import { GithubUserList } from "./UseEffect4";
 
 
 
@@ -24,7 +24,7 @@ export class App extends React.Component{
         <GithubUser username="gianmarcotoso" />
         
         <Counter />
-        <TodoList />
+        <GithubUserList item="gianmarcotoso"/>
       </div>
       )
 
