@@ -1,4 +1,6 @@
+
 import React from "react"
+import './index.css'
 export class Welcome extends React.Component{
     render () {
         return (
@@ -9,3 +11,4 @@ export class Welcome extends React.Component{
   
   }
 }
+
