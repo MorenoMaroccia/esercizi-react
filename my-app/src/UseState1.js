@@ -3,8 +3,8 @@ import React, { useState } from "react";
 
 
 
-export function ClickCounter ({initialValue = 0}){
-const [counter, setCounter] = useState(initialValue)
+export function ClickCounter (){
+const [counter, setCounter] = useState(0)
 
  function handleCounterIncrement() {
    setCounter(c => c + 1)
