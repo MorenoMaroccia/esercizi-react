@@ -8,8 +8,8 @@ export class ClickTracker extends React.Component{
     name:''
   }
 
-handleClick = (target) => {
-    this.setState({name:target.name})
+handleClick = (event) => {
+    this.setState({name:event.target.name})
     
   };
 
