@@ -17,10 +17,11 @@ export class TodoList6 extends React.Component{
         this.setState({items: this.state.items, item:'' }); 
 
         }
-        handleInputReset =() => {
-          
-           this.setState({items:[]}); 
-          }
+        handleDeleteItem = (index) => {
+            const arrayCopy = [...this.state.items]
+            arrayCopy.splice(index, 1)
+            this.setState({items:[...arrayCopy]})
+        }
 
         
           
@@ -33,11 +34,11 @@ export class TodoList6 extends React.Component{
                 
                 <input onChange={this.handleInputChange} value={this.state.item}></input>
                 <button onClick={this.handleAddItem}>Add</button>
-                <button onClick={this.handleInputReset}>Reset</button>
+                
                 
                 <ul>
                 {this.state.items.map((item) => <li key={this.state.items.indexOf(item)}>{item}
-                <button onClick='reset'>remove</button></li>) }
+                <button onClick={this.handleDeleteItem}>delete</button></li>) }
                 </ul> 
             
             </div>
